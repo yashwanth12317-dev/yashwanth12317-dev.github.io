@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yashwanth R | Game Development & Cybersecurity Portfolio</title>
-  <meta name="description" content="Portfolio of Yashwanth R — B.Tech IT student specializing in Game Development, Cybersecurity, Python, and Software Engineering." />
-  <link rel="icon" href="https://ui-avatars.com/api/?name=YR&background=eab308&color=000000" type="image/png" />
+  <title>Yashwanth R | Game Dev, Cybersecurity & ProtoSem Fellow</title>
+  <meta name="description" content="Portfolio of Yashwanth R — B.Tech IT student at KCT, currently doing ProtoSem at FORGE, Game Developer, Cybersecurity Enthusiast, and National Football Athlete." />
+  <link rel="icon" href="https://ui-avatars.com/api/?name=YR&background=06b6d4&color=000000" type="image/png" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,15 +15,17 @@
       theme: {
         extend: {
           colors: {
-            cyber: {
-              black: '#07080d',
-              dark: '#0e111a',
-              card: '#131724',
-              border: '#1f263b',
-              gold: '#eab308',
-              goldLight: '#fde047',
-              goldDark: '#ca8a04',
-              neon: '#fbbf24',
+            brand: {
+              black: '#05070e',
+              dark: '#0a0e1a',
+              card: '#10172a',
+              cardBorder: '#1e293b',
+              cyan: '#06b6d4',
+              cyanGlow: '#22d3ee',
+              emerald: '#10b981',
+              gold: '#f59e0b',
+              purple: '#8b5cf6',
+              text: '#f8fafc',
               dim: '#94a3b8'
             }
           },
@@ -33,9 +35,10 @@
             heading: ['"Outfit"', 'sans-serif']
           },
           boxShadow: {
-            'gold-glow': '0 0 25px -5px rgba(234, 179, 8, 0.4)',
-            'gold-glow-lg': '0 0 50px -10px rgba(234, 179, 8, 0.5)',
-            'card-glow': '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
+            'cyan-glow': '0 0 30px -5px rgba(6, 182, 212, 0.45)',
+            'emerald-glow': '0 0 30px -5px rgba(16, 185, 129, 0.45)',
+            'gold-glow': '0 0 30px -5px rgba(245, 158, 11, 0.45)',
+            'card-elevated': '0 10px 40px -10px rgba(0, 0, 0, 0.6)'
           }
         }
       }
@@ -55,45 +58,44 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
   <style>
-    /* Cyberpunk Grid & Glow background */
-    .bg-cyber-grid {
-      background-size: 40px 40px;
+    /* Sleek Tech Background & Grids */
+    .bg-tech-grid {
+      background-size: 48px 48px;
       background-image: 
-        linear-gradient(to right, rgba(234, 179, 8, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(234, 179, 8, 0.04) 1px, transparent 1px);
+        linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
     }
     
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
+    .gradient-heading {
+      background: linear-gradient(135deg, #ffffff 10%, #22d3ee 50%, #06b6d4 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .corner-bracket {
-      position: relative;
-    }
-    .corner-bracket::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      width: 10px;
-      height: 10px;
-      border-top: 2px solid #eab308;
-      border-left: 2px solid #eab308;
-    }
-    .corner-bracket::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      right: -2px;
-      width: 10px;
-      height: 10px;
-      border-bottom: 2px solid #eab308;
-      border-right: 2px solid #eab308;
+    .emerald-gradient {
+      background: linear-gradient(135deg, #a7f3d0 0%, #10b981 60%, #047857 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    /* Magnetic button transition */
+    .gold-gradient {
+      background: linear-gradient(135deg, #fde68a 0%, #f59e0b 60%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-card {
+      background: rgba(16, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(30, 41, 59, 0.9);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(6, 182, 212, 0.5);
+    }
+
+    /* Magnetic micro-interaction */
     .magnetic-btn {
       transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease, border-color 0.2s ease;
       will-change: transform;
@@ -101,336 +103,651 @@
 
     /* Custom scrollbar */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 7px;
     }
     ::-webkit-scrollbar-track {
-      background: #07080d;
+      background: #05070e;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1f263b;
+      background: #1e293b;
       border-radius: 4px;
-      border: 1px solid rgba(234, 179, 8, 0.2);
+      border: 1px solid rgba(6, 182, 212, 0.2);
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #eab308;
+      background: #06b6d4;
+    }
+
+    /* Radar Ping Animation */
+    @keyframes radar-pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    .radar-ring {
+      animation: radar-pulse 3s infinite ease-in-out;
     }
   </style>
 </head>
 
-<body class="bg-cyber-black text-slate-200 font-sans antialiased selection:bg-cyber-gold selection:text-black min-h-screen relative overflow-x-hidden">
+<body class="bg-brand-black text-slate-200 font-sans antialiased selection:bg-brand-cyan selection:text-black min-h-screen relative overflow-x-hidden">
 
-  <!-- Ambient Cyber Lighting -->
+  <!-- Ambient Glow Backgrounds -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-cyber-gold/10 rounded-full blur-[140px]"></div>
-    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-amber-500/10 rounded-full blur-[160px]"></div>
-    <div class="absolute -bottom-40 left-1/3 w-[500px] h-[500px] bg-yellow-600/10 rounded-full blur-[180px]"></div>
-    <div class="absolute inset-0 bg-cyber-grid pointer-events-none opacity-80"></div>
+    <div class="absolute -top-40 -left-40 w-[550px] h-[550px] bg-cyan-600/15 rounded-full blur-[170px]"></div>
+    <div class="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-[170px]"></div>
+    <div class="absolute bottom-10 left-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[190px]"></div>
+    <div class="absolute inset-0 bg-tech-grid pointer-events-none opacity-90"></div>
   </div>
 
-  <!-- Main Wrapper -->
+  <!-- Main Container -->
   <div class="relative z-10 flex flex-col min-h-screen">
 
-    <!-- Navigation Bar -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-cyber-black/80 border-b border-cyber-border">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-brand-black/85 border-b border-brand-cardBorder">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
-        <!-- Logo / Monogram -->
+        <!-- Logo -->
         <a href="#hero" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-lg bg-cyber-dark border border-cyber-gold/40 flex items-center justify-center font-mono font-bold text-cyber-gold shadow-gold-glow group-hover:border-cyber-gold transition duration-300">
+          <div class="w-11 h-11 rounded-xl bg-brand-dark border border-brand-cyan/40 flex items-center justify-center font-mono font-bold text-brand-cyan shadow-cyan-glow group-hover:border-brand-cyan group-hover:scale-105 transition duration-300">
             YR
           </div>
           <div class="flex flex-col">
-            <span class="font-heading font-extrabold text-lg tracking-wider text-white group-hover:text-cyber-gold transition">
-              YASHWANTH<span class="text-cyber-gold">.DEV</span>
+            <span class="font-heading font-black text-lg tracking-wider text-white group-hover:text-brand-cyan transition">
+              YASHWANTH <span class="text-brand-cyan">R</span>
             </span>
-            <span class="font-mono text-xs text-cyber-dim tracking-widest uppercase">System Online</span>
+            <div class="flex items-center gap-1.5 font-mono text-[10px] text-emerald-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>ProtoSem @ FORGE</span>
+            </div>
           </div>
         </a>
 
-        <!-- Nav Links (Desktop) -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium font-mono text-slate-300">
-          <a href="#projects" class="hover:text-cyber-gold transition flex items-center gap-1.5"><span class="text-cyber-gold text-xs">//01</span> Projects</a>
-          <a href="#experience" class="hover:text-cyber-gold transition flex items-center gap-1.5"><span class="text-cyber-gold text-xs">//02</span> Experience</a>
-          <a href="#skills" class="hover:text-cyber-gold transition flex items-center gap-1.5"><span class="text-cyber-gold text-xs">//03</span> Skills</a>
-          <a href="#achievements" class="hover:text-cyber-gold transition flex items-center gap-1.5"><span class="text-cyber-gold text-xs">//04</span> Leadership</a>
-          <a href="#contact" class="hover:text-cyber-gold transition flex items-center gap-1.5"><span class="text-cyber-gold text-xs">//05</span> Contact</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold font-mono tracking-wider text-slate-300">
+          <a href="#protosem" class="text-emerald-400 hover:text-emerald-300 transition flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> ProtoSem FORGE
+          </a>
+          <a href="#projects" class="hover:text-brand-cyan transition">Projects</a>
+          <a href="#football" class="hover:text-amber-400 transition flex items-center gap-1">
+            <i class="fa-solid fa-futbol text-amber-400 text-[11px]"></i> Football & Leadership
+          </a>
+          <a href="#skills" class="hover:text-brand-cyan transition">Skills</a>
+          <a href="#contact" class="hover:text-brand-cyan transition">Contact</a>
         </nav>
 
-        <!-- Action Buttons -->
+        <!-- Top Right Actions -->
         <div class="flex items-center gap-3">
-          <a href="resume.html" target="_blank" class="magnetic-btn relative px-4 py-2 rounded-md bg-cyber-gold text-black font-mono font-bold text-xs uppercase tracking-wider flex items-center gap-2 hover:bg-cyber-goldLight shadow-gold-glow transition">
+          <a href="resume.html" target="_blank" class="magnetic-btn px-4 py-2 rounded-lg bg-brand-cyan text-black font-mono font-bold text-xs uppercase tracking-wider flex items-center gap-2 hover:bg-brand-cyanGlow shadow-cyan-glow transition">
             <i class="fa-solid fa-file-pdf"></i>
-            <span>ATS Resume</span>
+            <span class="hidden sm:inline">ATS Resume</span>
+            <span class="sm:hidden">Resume</span>
           </a>
-          <a href="https://github.com/yashwanth12317-dev" target="_blank" class="w-9 h-9 rounded-md bg-cyber-dark border border-cyber-border flex items-center justify-center text-slate-300 hover:text-cyber-gold hover:border-cyber-gold transition">
-            <i class="fa-brands fa-github text-base"></i>
+          <a href="https://github.com/yashwanth12317-dev" target="_blank" class="w-10 h-10 rounded-lg bg-brand-dark border border-brand-cardBorder flex items-center justify-center text-slate-300 hover:text-brand-cyan hover:border-brand-cyan transition">
+            <i class="fa-brands fa-github text-lg"></i>
           </a>
         </div>
       </div>
     </header>
 
-    <!-- HERO SECTION with 3D Floating Tilt Card -->
-    <section id="hero" class="relative pt-12 pb-20 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- HERO SECTION (With User Photo & 3D Floating Tilt Card) -->
+    <section id="hero" class="relative pt-10 pb-16 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
-        <!-- Left Content -->
+        <!-- Left Hero Content -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyber-gold/10 border border-cyber-gold/30 text-cyber-gold font-mono text-xs tracking-wider uppercase">
-            <span class="w-2 h-2 rounded-full bg-cyber-gold animate-ping"></span>
-            <span>Available for Internships & Projects</span>
-          </div>
 
-          <div class="space-y-2">
-            <p class="font-mono text-cyber-gold text-sm tracking-widest uppercase">// HELLO WORLD, I AM</p>
-            <h1 class="font-heading font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white">
-              YASHWANTH <span class="gold-gradient-text">R</span>
-            </h1>
-          </div>
-
-          <!-- Dynamic Typed.js Subtitle -->
-          <div class="font-mono text-lg sm:text-2xl text-slate-300 h-10 flex items-center">
-            <span class="text-cyber-gold mr-2">&gt;</span>
-            <span id="typed-text" class="text-white font-semibold"></span>
-          </div>
-
-          <!-- Bio / Career Objective -->
-          <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
-            Third-year <strong class="text-white">B.Tech Information Technology</strong> student at <strong class="text-cyber-gold">Kumaraguru College of Technology (KCT)</strong>. Focused on bridging creative mechanics in <strong class="text-white">Game Development</strong> with defensive resilience in <strong class="text-white">Cybersecurity & Software Engineering</strong>.
-          </p>
-
-          <!-- Status / Highlights Pills -->
-          <div class="flex flex-wrap gap-3 pt-2 font-mono text-xs">
-            <div class="px-3 py-2 rounded bg-cyber-dark/80 border border-cyber-border text-slate-300 flex items-center gap-2">
-              <i class="fa-solid fa-graduation-cap text-cyber-gold"></i>
-              <span>KCT IT '28 · CGPA: 7.4</span>
+          <!-- Status Chips -->
+          <div class="flex flex-wrap items-center gap-2.5">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 font-mono text-xs font-semibold tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>Currently undergoing ProtoSem @ FORGE</span>
             </div>
-            <div class="px-3 py-2 rounded bg-cyber-dark/80 border border-cyber-border text-slate-300 flex items-center gap-2">
-              <i class="fa-solid fa-gamepad text-cyber-gold"></i>
-              <span>Unreal Engine & Unity</span>
-            </div>
-            <div class="px-3 py-2 rounded bg-cyber-dark/80 border border-cyber-border text-slate-300 flex items-center gap-2">
-              <i class="fa-solid fa-shield-halved text-cyber-gold"></i>
-              <span>Kali Linux & Network Security</span>
-            </div>
-            <div class="px-3 py-2 rounded bg-cyber-dark/80 border border-cyber-border text-slate-300 flex items-center gap-2">
-              <i class="fa-solid fa-futbol text-cyber-gold"></i>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs">
+              <i class="fa-solid fa-futbol text-[11px]"></i>
               <span>National Football Athlete</span>
             </div>
           </div>
 
+          <!-- Hero Name Block with Direct Photo Integration -->
+          <div class="flex items-center gap-5 sm:gap-6 pt-2">
+            <!-- Starting Photo Frame Near Name -->
+            <div class="relative group flex-shrink-0">
+              <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-emerald-400 to-amber-400 opacity-80 blur group-hover:opacity-100 transition duration-300 radar-ring"></div>
+              <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-brand-cyan bg-brand-dark p-0.5 shadow-cyan-glow">
+                <img src="profile.jpg"
+                     alt="Yashwanth R"
+                     class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition duration-500" />
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <p class="font-mono text-brand-cyan text-xs sm:text-sm tracking-widest uppercase">// IT ENGINEER & BUILDER</p>
+              <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white">
+                YASHWANTH <span class="gradient-heading">R</span>
+              </h1>
+            </div>
+          </div>
+
+          <!-- Dynamic Typed.js Subtitle -->
+          <div class="font-mono text-lg sm:text-2xl text-slate-200 h-10 flex items-center">
+            <span class="text-brand-cyan mr-2 font-bold">&gt;</span>
+            <span id="typed-text" class="text-white font-semibold"></span>
+          </div>
+
+          <!-- Bio -->
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+            Third-year <strong class="text-white">B.Tech IT</strong> student at <strong class="text-brand-cyan">Kumaraguru College of Technology (KCT)</strong>. Currently immersed in high-velocity innovation at <strong class="text-emerald-400">FORGE ProtoSem</strong>. Driven by the adrenaline of <strong class="text-white">3D Game Development</strong>, defensive precision in <strong class="text-white">Cybersecurity</strong>, and the relentless discipline of <strong class="text-amber-400">National-Level Football</strong>.
+          </p>
+
+          <!-- Quick Metrics Bar -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 font-mono text-xs">
+            <div class="p-3 rounded-xl bg-brand-card/80 border border-brand-cardBorder">
+              <span class="text-slate-400 block text-[10px] uppercase">Education</span>
+              <span class="text-white font-bold">KCT IT '28</span>
+              <span class="text-brand-cyan block text-[10px]">CGPA: 7.4 / 10</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-card/80 border border-emerald-500/30">
+              <span class="text-emerald-400 block text-[10px] uppercase">Fellowship</span>
+              <span class="text-white font-bold">ProtoSem</span>
+              <span class="text-emerald-400 block text-[10px]">FORGE Incubator</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-card/80 border border-brand-cardBorder">
+              <span class="text-slate-400 block text-[10px] uppercase">Engines & Sec</span>
+              <span class="text-white font-bold">Unreal & Unity</span>
+              <span class="text-brand-cyan block text-[10px]">Kali Linux / Sec</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-card/80 border border-amber-500/30">
+              <span class="text-amber-400 block text-[10px] uppercase">Athletics</span>
+              <span class="text-white font-bold">Rebels FC</span>
+              <span class="text-amber-400 block text-[10px]">National U18 / Futsal</span>
+            </div>
+          </div>
+
           <!-- CTA Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-4">
-            <a href="#projects" class="magnetic-btn px-6 py-3.5 rounded-lg bg-cyber-gold text-black font-mono font-bold text-sm tracking-wider uppercase flex items-center gap-2 shadow-gold-glow hover:bg-cyber-goldLight transition">
-              <i class="fa-solid fa-terminal"></i>
-              <span>Explore Projects</span>
+          <div class="flex flex-wrap items-center gap-3.5 pt-3">
+            <a href="#protosem" class="magnetic-btn px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-black font-mono font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-emerald-glow hover:brightness-110 transition">
+              <i class="fa-solid fa-bolt"></i>
+              <span>ProtoSem @ FORGE</span>
             </a>
-            <a href="#contact" class="magnetic-btn px-6 py-3.5 rounded-lg bg-cyber-dark border border-cyber-gold/40 text-slate-200 font-mono font-bold text-sm tracking-wider uppercase flex items-center gap-2 hover:border-cyber-gold hover:text-cyber-gold transition">
-              <i class="fa-solid fa-paper-plane"></i>
-              <span>Get In Touch</span>
+            <a href="#football" class="magnetic-btn px-5 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-mono font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-gold-glow hover:brightness-110 transition">
+              <i class="fa-solid fa-trophy"></i>
+              <span>Football Journey</span>
             </a>
-            <a href="resume.html" target="_blank" class="magnetic-btn px-5 py-3.5 rounded-lg bg-transparent border border-cyber-border text-slate-400 font-mono text-sm tracking-wider uppercase flex items-center gap-2 hover:border-slate-400 hover:text-white transition">
-              <i class="fa-regular fa-file-lines"></i>
-              <span>View Resume</span>
+            <a href="#projects" class="magnetic-btn px-5 py-3 rounded-xl bg-brand-dark border border-brand-cyan/40 text-brand-cyan font-mono font-bold text-xs uppercase tracking-wider flex items-center gap-2 hover:bg-brand-cyan hover:text-black transition">
+              <i class="fa-solid fa-code"></i>
+              <span>Projects</span>
             </a>
           </div>
 
-          <!-- Social Quick Links -->
-          <div class="flex items-center gap-4 pt-4 text-slate-400 font-mono text-xs">
-            <span>CONNECT:</span>
-            <a href="https://github.com/yashwanth12317-dev" target="_blank" class="hover:text-cyber-gold transition"><i class="fa-brands fa-github text-lg"></i></a>
-            <a href="https://linkedin.com/in/yashwanth-r-9a9b3520b" target="_blank" class="hover:text-cyber-gold transition"><i class="fa-brands fa-linkedin text-lg"></i></a>
-            <a href="mailto:yashwanth12317@gmail.com" class="hover:text-cyber-gold transition"><i class="fa-solid fa-envelope text-lg"></i></a>
-            <a href="tel:6381901236" class="hover:text-cyber-gold transition"><i class="fa-solid fa-phone text-lg"></i></a>
-          </div>
         </div>
 
-        <!-- Right 3D Floating Hero Tilt Card -->
+        <!-- Right 3D Floating Profile Tilt Card -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="tilt-card corner-bracket relative w-full max-w-md bg-cyber-card/90 backdrop-blur-xl border border-cyber-border p-6 rounded-2xl shadow-card-glow hover:border-cyber-gold/50 transition duration-300"
-               data-tilt data-tilt-max="12" data-tilt-speed="800" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="tilt-card relative w-full max-w-md glass-card p-6 rounded-2xl shadow-card-elevated hover:shadow-cyan-glow transition duration-500"
+               data-tilt data-tilt-max="10" data-tilt-speed="800" data-tilt-glare data-tilt-max-glare="0.2">
             
-            <!-- Terminal Header Bar -->
-            <div class="flex items-center justify-between border-b border-cyber-border pb-4 mb-5">
+            <!-- Terminal Header -->
+            <div class="flex items-center justify-between border-b border-brand-cardBorder pb-3 mb-5">
               <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-                <span class="font-mono text-xs text-cyber-dim ml-2">identity_matrix.exe</span>
+                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                <span class="font-mono text-xs text-slate-400 ml-2">yashwanth_node.sh</span>
               </div>
-              <span class="font-mono text-[10px] uppercase tracking-widest text-cyber-gold border border-cyber-gold/30 px-2 py-0.5 rounded bg-cyber-gold/5">ACTIVE</span>
+              <span class="font-mono text-[10px] uppercase font-bold text-emerald-400 border border-emerald-500/40 px-2.5 py-0.5 rounded-full bg-emerald-500/10">
+                LIVE STATUS: FORGE
+              </span>
             </div>
 
-            <!-- Avatar & Profile Intro -->
-            <div class="flex items-center gap-4 mb-6">
-              <div class="relative w-20 h-20 rounded-xl overflow-hidden border-2 border-cyber-gold p-0.5 shadow-gold-glow bg-cyber-dark flex-shrink-0">
-                <img src="profile.jpg"
-                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/307374454?v=4'; this.onerror=function(){this.src='https://ui-avatars.com/api/?name=Yashwanth+R&background=eab308&color=050505&size=256&bold=true';}"
-                     alt="Yashwanth R"
-                     class="w-full h-full object-cover rounded-lg" />
-              </div>
-              <div>
-                <h3 class="font-heading font-bold text-xl text-white">Yashwanth R</h3>
-                <p class="font-mono text-xs text-cyber-gold tracking-wide">IT Engineer & Developer</p>
-                <p class="font-mono text-xs text-slate-400 mt-1 flex items-center gap-1.5">
-                  <i class="fa-solid fa-location-dot text-cyber-gold text-[10px]"></i> Tamil Nadu, India
-                </p>
+            <!-- Profile Hero Showcase in Card -->
+            <div class="relative w-full h-56 rounded-xl overflow-hidden border border-brand-cardBorder mb-5 bg-brand-dark group">
+              <img src="profile.jpg"
+                   alt="Yashwanth R"
+                   class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent"></div>
+              
+              <!-- Floating Overlay Tags -->
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                <div>
+                  <h3 class="font-heading font-extrabold text-lg text-white">Yashwanth R</h3>
+                  <p class="font-mono text-[11px] text-brand-cyan">Innovator · Game Dev · Athlete</p>
+                </div>
+                <div class="px-2.5 py-1 rounded bg-black/80 backdrop-blur border border-amber-400/40 text-amber-400 font-mono text-[10px] font-bold">
+                  #7 ATHLETE
+                </div>
               </div>
             </div>
 
-            <!-- Terminal Key-Value Metrics -->
-            <div class="space-y-3 font-mono text-xs bg-cyber-black/70 p-4 rounded-xl border border-cyber-border/70 mb-5">
-              <div class="flex justify-between items-center pb-2 border-b border-cyber-border/40">
-                <span class="text-slate-400">&gt; Institution:</span>
-                <span class="text-white font-medium">Kumaraguru College of Tech (KCT)</span>
+            <!-- Live Status & Telemetry Details -->
+            <div class="space-y-2.5 font-mono text-xs bg-brand-black/80 p-4 rounded-xl border border-brand-cardBorder mb-4">
+              <div class="flex justify-between items-center pb-1.5 border-b border-brand-cardBorder/50">
+                <span class="text-slate-400">Current Program:</span>
+                <span class="text-emerald-400 font-bold">ProtoSem (20-Week Track)</span>
               </div>
-              <div class="flex justify-between items-center pb-2 border-b border-cyber-border/40">
-                <span class="text-slate-400">&gt; Degree:</span>
-                <span class="text-cyber-gold font-medium">B.Tech IT (3rd Year)</span>
+              <div class="flex justify-between items-center pb-1.5 border-b border-brand-cardBorder/50">
+                <span class="text-slate-400">Host Organization:</span>
+                <span class="text-white font-medium">FORGE Innovation & Ventures</span>
               </div>
-              <div class="flex justify-between items-center pb-2 border-b border-cyber-border/40">
-                <span class="text-slate-400">&gt; Core Focus:</span>
-                <span class="text-white font-medium">Game Dev & Cybersecurity</span>
-              </div>
-              <div class="flex justify-between items-center pb-2 border-b border-cyber-border/40">
-                <span class="text-slate-400">&gt; Fellowship:</span>
-                <span class="text-emerald-400 font-medium">ProtoSem FORGE (20 Weeks)</span>
+              <div class="flex justify-between items-center pb-1.5 border-b border-brand-cardBorder/50">
+                <span class="text-slate-400">College & Stream:</span>
+                <span class="text-brand-cyan font-medium">KCT — B.Tech IT (3rd Year)</span>
               </div>
               <div class="flex justify-between items-center">
-                <span class="text-slate-400">&gt; Athletic Honor:</span>
-                <span class="text-yellow-400 font-medium">Rebels FC National U18</span>
+                <span class="text-slate-400">Competitive Club:</span>
+                <span class="text-amber-400 font-medium">Rebels FC (Bangalore U18)</span>
               </div>
             </div>
 
-            <!-- Code snippet display -->
-            <div class="font-mono text-[11px] text-slate-400 leading-relaxed bg-cyber-dark/90 p-3 rounded-lg border border-cyber-border overflow-x-auto">
-              <span class="text-cyber-gold">const</span> dev = {<br/>
-              &nbsp;&nbsp;name: <span class="text-emerald-400">"Yashwanth R"</span>,<br/>
-              &nbsp;&nbsp;status: <span class="text-emerald-400">"Building & Innovating"</span>,<br/>
-              &nbsp;&nbsp;skills: [<span class="text-yellow-300">"Python"</span>, <span class="text-yellow-300">"Unreal"</span>, <span class="text-yellow-300">"Kali"</span>, <span class="text-yellow-300">"Java"</span>]<br/>
-              };
+            <!-- Quick Action Links in Card -->
+            <div class="grid grid-cols-2 gap-2 font-mono text-xs">
+              <a href="mailto:yashwanth12317@gmail.com" class="p-2.5 rounded-lg bg-brand-dark border border-brand-cardBorder text-slate-300 hover:text-brand-cyan hover:border-brand-cyan text-center transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-envelope text-brand-cyan"></i> Email Me
+              </a>
+              <a href="https://linkedin.com/in/yashwanth-r-9a9b3520b" target="_blank" class="p-2.5 rounded-lg bg-brand-dark border border-brand-cardBorder text-slate-300 hover:text-brand-cyan hover:border-brand-cyan text-center transition flex items-center justify-center gap-2">
+                <i class="fa-brands fa-linkedin text-brand-cyan"></i> LinkedIn
+              </a>
             </div>
+
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION 1: FEATURED PROJECTS (Cyberpunk Minimal Grid) -->
-    <section id="projects" class="py-20 border-t border-cyber-border relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+    <!-- NEW SEPARATE DEDICATED ROW: PROTOSEM @ FORGE INNOVATION FELLOWSHIP -->
+    <section id="protosem" class="py-16 border-t border-brand-cardBorder relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
-          <div class="flex items-center gap-2 font-mono text-cyber-gold text-xs uppercase tracking-widest">
-            <span>// PORTFOLIO DIRECTORY</span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs uppercase tracking-widest mb-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>CURRENT ACTIVE FELLOWSHIP</span>
           </div>
-          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mt-1">
-            Featured <span class="gold-gradient-text">Engineering Projects</span>
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white">
+            ProtoSem @ <span class="emerald-gradient">FORGE Innovation</span>
+          </h2>
+        </div>
+        <div class="text-right font-mono text-xs text-slate-400">
+          <span class="text-emerald-400 font-bold block">// 20-WEEK ACCELERATED TRACK</span>
+          <span>Hands-on Prototyping & Technology Translation</span>
+        </div>
+      </div>
+
+      <!-- Main ProtoSem Showcase Bento Box -->
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-emerald-500/30 relative overflow-hidden shadow-emerald-glow/20">
+        <div class="absolute -top-32 -right-32 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left 8 Cols: Fellowship Narrative & Pillars -->
+          <div class="lg:col-span-8 space-y-6">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="px-3.5 py-1.5 rounded-lg bg-emerald-500 text-black font-mono font-extrabold text-xs uppercase tracking-wider shadow-emerald-glow">
+                ACTIVE COHORT FELLOW
+              </span>
+              <span class="font-mono text-xs text-slate-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-building-columns text-emerald-400"></i> FORGE Innovation & Ventures
+              </span>
+              <span class="font-mono text-xs text-slate-400 flex items-center gap-1">
+                <i class="fa-regular fa-calendar text-emerald-400"></i> 20-Week Immersion
+              </span>
+            </div>
+
+            <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-white leading-tight">
+              Transforming Engineering Concepts into Scalable, Real-World Industrial Prototypes
+            </h3>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              I am currently undergoing the prestigious <strong class="text-white">ProtoSem 20-week intensive fellowship</strong> at <strong class="text-emerald-400">FORGE Innovation & Ventures</strong>. This specialized program bridges academic IT principles with cutting-edge product design, rapid MVP fabrication, industrial problem validation, and agile systems engineering.
+            </p>
+
+            <!-- 4 Pillar Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              
+              <!-- Pillar 1 -->
+              <div class="p-4 rounded-xl bg-brand-dark/90 border border-brand-cardBorder space-y-2 hover:border-emerald-500/50 transition">
+                <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-base">
+                  <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h4 class="font-heading font-bold text-white text-base">Rapid Prototype Engineering</h4>
+                <p class="text-slate-400 text-xs leading-relaxed font-mono">
+                  Iterating through CAD/3D modeling, hardware-software interfacing, and sensor-driven feedback architectures.
+                </p>
+              </div>
+
+              <!-- Pillar 2 -->
+              <div class="p-4 rounded-xl bg-brand-dark/90 border border-brand-cardBorder space-y-2 hover:border-emerald-500/50 transition">
+                <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-base">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <h4 class="font-heading font-bold text-white text-base">Problem Validation & Discovery</h4>
+                <p class="text-slate-400 text-xs leading-relaxed font-mono">
+                  Conducting root-cause analysis on industrial friction points to engineer viable market-fit solutions.
+                </p>
+              </div>
+
+              <!-- Pillar 3 -->
+              <div class="p-4 rounded-xl bg-brand-dark/90 border border-brand-cardBorder space-y-2 hover:border-emerald-500/50 transition">
+                <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-base">
+                  <i class="fa-solid fa-code-fork"></i>
+                </div>
+                <h4 class="font-heading font-bold text-white text-base">Agile Sprint Fabrication</h4>
+                <p class="text-slate-400 text-xs leading-relaxed font-mono">
+                  Executing weekly sprints, technical design reviews, iterative testing loops, and MVP demonstration.
+                </p>
+              </div>
+
+              <!-- Pillar 4 -->
+              <div class="p-4 rounded-xl bg-brand-dark/90 border border-brand-cardBorder space-y-2 hover:border-emerald-500/50 transition">
+                <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-base">
+                  <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <h4 class="font-heading font-bold text-white text-base">Cross-Disciplinary Teamwork</h4>
+                <p class="text-slate-400 text-xs leading-relaxed font-mono">
+                  Collaborating in multidisciplinary squads across IT, electronics, and design to ship cohesive products.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right 4 Cols: Live Cohort Status & Metrics Widget -->
+          <div class="lg:col-span-4 bg-brand-black/90 p-6 rounded-2xl border border-emerald-500/40 space-y-5">
+            
+            <div class="flex items-center justify-between border-b border-brand-cardBorder pb-3">
+              <span class="font-mono text-xs text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-laptop-code"></i> FORGE Milestone Hub
+              </span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            </div>
+
+            <!-- Milestone Timeline Progression -->
+            <div class="space-y-3 font-mono text-xs">
+              <div class="space-y-1">
+                <div class="flex justify-between text-[11px]">
+                  <span class="text-slate-300">Phase 1: Problem Scoping & Discovery</span>
+                  <span class="text-emerald-400">Completed ✓</span>
+                </div>
+                <div class="w-full h-1.5 rounded-full bg-brand-card overflow-hidden">
+                  <div class="h-full bg-emerald-400 rounded-full w-full"></div>
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <div class="flex justify-between text-[11px]">
+                  <span class="text-slate-300">Phase 2: MVP Design & Architecture</span>
+                  <span class="text-emerald-400">Completed ✓</span>
+                </div>
+                <div class="w-full h-1.5 rounded-full bg-brand-card overflow-hidden">
+                  <div class="h-full bg-emerald-400 rounded-full w-full"></div>
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <div class="flex justify-between text-[11px]">
+                  <span class="text-slate-300">Phase 3: Prototype Build & Testing</span>
+                  <span class="text-cyan-400 animate-pulse">In Progress ⚡</span>
+                </div>
+                <div class="w-full h-1.5 rounded-full bg-brand-card overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full w-3/4"></div>
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <div class="flex justify-between text-[11px]">
+                  <span class="text-slate-400">Phase 4: Industry Validation & Demo</span>
+                  <span class="text-slate-500">Upcoming</span>
+                </div>
+                <div class="w-full h-1.5 rounded-full bg-brand-card overflow-hidden">
+                  <div class="h-full bg-brand-cardBorder rounded-full w-1/4"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Focus Summary -->
+            <div class="p-3.5 rounded-xl bg-brand-dark border border-brand-cardBorder font-mono text-xs text-slate-300 space-y-1">
+              <span class="text-emerald-400 font-bold block text-[10px] uppercase">// CORE TAKEAWAY</span>
+              <p class="text-[11px] leading-relaxed text-slate-300">
+                Sharpening end-to-end product execution, design thinking, and rapid prototyping under direct guidance from FORGE startup mentors.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW EXPANDED SECTION: FOOTBALL, REBELS FC & ATHLETIC LEADERSHIP -->
+    <section id="football" class="py-16 border-t border-brand-cardBorder relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-futbol"></i>
+            <span>HIGH PERFORMANCE ATHLETICS</span>
+          </div>
+          <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white">
+            Football, Rebels FC & <span class="gold-gradient">Leadership</span>
           </h2>
         </div>
         <p class="text-slate-400 font-mono text-xs max-w-md">
-          Showcasing practical engineering applications across inventory logistics and interactive 3D gameplay simulations.
+          Competitive sports forged my work ethic, composure under extreme pressure, strategic game sense, and leadership mindset.
+        </p>
+      </div>
+
+      <!-- Football Narrative Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+        <!-- Main Banner Card (8 cols) -->
+        <div class="lg:col-span-8 glass-card rounded-2xl p-6 sm:p-8 border border-amber-500/30 space-y-6 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="px-3 py-1 rounded-md bg-amber-500 text-black font-mono font-bold text-xs uppercase tracking-wider shadow-gold-glow">
+              Rebels FC (Bangalore U18)
+            </span>
+            <span class="px-3 py-1 rounded-md bg-brand-dark border border-amber-500/40 text-amber-300 font-mono text-xs">
+              National Level Footballer
+            </span>
+            <span class="px-3 py-1 rounded-md bg-brand-dark border border-amber-500/40 text-amber-300 font-mono text-xs">
+              India Futsal Participant
+            </span>
+          </div>
+
+          <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">
+            Elite Youth Football & Captaincy: Leading on the Pitch
+          </h3>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Represented <strong class="text-white">Rebels Football Club (Bangalore U18)</strong> in high-stakes national competitions, competing alongside and against top-tier youth prospects in India. Concurrently participated in the high-intensity <strong class="text-amber-400">India Futsal National Circuit</strong>, mastering quick-touch agility and tactical micro-decisions.
+          </p>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            As a <strong class="text-white">Team Captain & Field Leader</strong> across numerous competitive tournaments, I spearheaded training regimes, marshaled on-pitch defensive and attacking transitions, and propelled squads to championship victories through tactical discipline and grit.
+          </p>
+
+          <!-- 3 Pillars: Discipline, Leadership, Tactics -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            <div class="bg-brand-black/90 p-4 rounded-xl border border-brand-cardBorder space-y-1.5">
+              <span class="text-amber-400 font-mono font-bold text-xs flex items-center gap-1.5">
+                <i class="fa-solid fa-stopwatch"></i> Elite Discipline
+              </span>
+              <p class="text-slate-400 font-mono text-xs leading-normal">
+                Hundreds of hours of intense physical conditioning, tactical drills, and uncompromising commitment to excellence.
+              </p>
+            </div>
+
+            <div class="bg-brand-black/90 p-4 rounded-xl border border-brand-cardBorder space-y-1.5">
+              <span class="text-amber-400 font-mono font-bold text-xs flex items-center gap-1.5">
+                <i class="fa-solid fa-crown"></i> High-Pressure Captaincy
+              </span>
+              <p class="text-slate-400 font-mono text-xs leading-normal">
+                Staying laser-focused in critical match minutes, motivating teammates, and executing strategies under fierce competition.
+              </p>
+            </div>
+
+            <div class="bg-brand-black/90 p-4 rounded-xl border border-brand-cardBorder space-y-1.5">
+              <span class="text-amber-400 font-mono font-bold text-xs flex items-center gap-1.5">
+                <i class="fa-solid fa-chess-knight"></i> Spatial Intelligence
+              </span>
+              <p class="text-slate-400 font-mono text-xs leading-normal">
+                Reading player formations in real time — an instinct that translates directly into 3D game logic and architecture.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Stats & Insights (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          
+          <!-- Stat Card 1 -->
+          <div class="glass-card p-5 rounded-xl border border-amber-500/30 font-mono">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-slate-400 text-xs uppercase">// COMPETITIVE TIER</span>
+              <i class="fa-solid fa-award text-amber-400 text-lg"></i>
+            </div>
+            <div class="text-2xl font-heading font-black text-white">National Level</div>
+            <p class="text-xs text-amber-400 mt-1">Rebels FC (Bangalore U18) & India Futsal</p>
+          </div>
+
+          <!-- Stat Card 2 -->
+          <div class="glass-card p-5 rounded-xl border border-brand-cardBorder font-mono">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-slate-400 text-xs uppercase">// TOURNAMENT ROLE</span>
+              <i class="fa-solid fa-people-group text-brand-cyan text-lg"></i>
+            </div>
+            <div class="text-2xl font-heading font-black text-white">Captain & Leader</div>
+            <p class="text-xs text-brand-cyan mt-1">Steering squads to competitive victories</p>
+          </div>
+
+          <!-- Bridge between sports & engineering -->
+          <div class="p-5 rounded-xl bg-brand-dark border border-brand-cardBorder font-mono text-xs space-y-2">
+            <span class="text-amber-400 font-bold block">// ATHLETIC MINDSET IN TECH</span>
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+              "Football taught me that talent without discipline is meaningless. Whether debugging code, optimizing game physics, or executing in a sprint, I bring the same relentless drive."
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: ENGINEERING PROJECTS -->
+    <section id="projects" class="py-16 border-t border-brand-cardBorder relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <div class="flex items-center gap-2 font-mono text-brand-cyan text-xs uppercase tracking-widest mb-1">
+            <span>// ENGINEERING SHOWCASE</span>
+          </div>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">
+            Featured <span class="gradient-heading">Projects</span>
+          </h2>
+        </div>
+        <p class="text-slate-400 font-mono text-xs max-w-md">
+          Inventory optimization systems and interactive 3D gameplay simulations built with Python, SQL, and Unreal Engine.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
         <!-- Project 1: Kirana Store Stock Replenishment Software -->
-        <div class="corner-bracket bg-cyber-card border border-cyber-border rounded-xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyber-gold/60 transition group hover:shadow-gold-glow">
+        <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-brand-cyan transition group hover:shadow-cyan-glow">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="font-mono text-xs text-cyber-gold uppercase px-2.5 py-1 rounded bg-cyber-gold/10 border border-cyber-gold/30">
-                Inventory Logistics & Analytics
+              <span class="font-mono text-xs text-brand-cyan uppercase px-3 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/30">
+                Logistics & Inventory Analytics
               </span>
-              <span class="font-mono text-xs text-slate-500">v1.2 · Python/SQL</span>
+              <span class="font-mono text-xs text-slate-500">Python · SQL · HTML</span>
             </div>
 
-            <h3 class="font-heading font-bold text-2xl text-white group-hover:text-cyber-gold transition">
+            <h3 class="font-heading font-bold text-2xl text-white group-hover:text-brand-cyan transition">
               Kirana Store Stock Replenishment System
             </h3>
 
             <p class="text-slate-300 text-sm leading-relaxed">
-              Developed a specialized inventory management and automated stock replenishment software tailored for small retail and kirana stores. Streamlines supply chain visibility and minimizes stockouts through intelligent threshold tracking.
+              Engineered a smart inventory management and automated stock replenishment software designed for retail kirana stores. Solves product stockouts and over-ordering through algorithmic threshold alerts and streamlined order flows.
             </p>
 
-            <!-- Feature Highlights -->
             <ul class="space-y-2 text-xs text-slate-400 font-mono">
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-cyber-gold mt-0.5"></i>
-                <span>Designed real-time stock level monitoring with automated low-stock warnings.</span>
+                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
+                <span>Automated SKU tracking with dynamic threshold alerts for fast-moving items.</span>
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-cyber-gold mt-0.5"></i>
-                <span>Engineered persistent relational database architecture for SKU categorization.</span>
+                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
+                <span>Structured relational database architecture for vendor and inventory records.</span>
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-cyber-gold mt-0.5"></i>
-                <span>Created clean user-friendly web interface for store managers and cashiers.</span>
+                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
+                <span>Lightweight web dashboard for rapid cashier billing and manager insights.</span>
               </li>
             </ul>
 
-            <!-- Tech Tags -->
             <div class="flex flex-wrap gap-2 pt-2">
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Python</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">HTML/CSS</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Database (SQL)</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Inventory Algorithms</span>
+              <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-300 font-mono text-xs border border-brand-cardBorder">Python</span>
+              <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-300 font-mono text-xs border border-brand-cardBorder">Relational SQL</span>
+              <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-300 font-mono text-xs border border-brand-cardBorder">HTML5/CSS</span>
+              <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-300 font-mono text-xs border border-brand-cardBorder">Inventory Optimization</span>
             </div>
           </div>
 
-          <div class="pt-6 border-t border-cyber-border/70 flex items-center justify-between mt-6">
-            <span class="font-mono text-xs text-slate-400">Status: Completed</span>
-            <a href="https://github.com/yashwanth12317-dev" target="_blank" class="font-mono text-xs text-cyber-gold hover:underline flex items-center gap-1.5 group-hover:translate-x-1 transition">
-              <span>View Source on GitHub</span>
+          <div class="pt-6 border-t border-brand-cardBorder flex items-center justify-between mt-6">
+            <span class="font-mono text-xs text-slate-400">Status: Complete</span>
+            <a href="https://github.com/yashwanth12317-dev" target="_blank" class="font-mono text-xs text-brand-cyan hover:underline flex items-center gap-1.5 group-hover:translate-x-1 transition">
+              <span>View on GitHub</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
         </div>
 
         <!-- Project 2: 3D Game Prototype in Unreal Engine -->
-        <div class="corner-bracket bg-cyber-card border border-cyber-border rounded-xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyber-gold/60 transition group hover:shadow-gold-glow">
+        <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-brand-cyan transition group hover:shadow-cyan-glow">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <span class="font-mono text-xs text-amber-400 uppercase px-2.5 py-1 rounded bg-amber-400/10 border border-amber-400/30">
+              <span class="font-mono text-xs text-purple-400 uppercase px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30">
                 Interactive 3D Simulation
               </span>
               <span class="font-mono text-xs text-slate-500">Unreal Engine 5</span>
             </div>
 
-            <h3 class="font-heading font-bold text-2xl text-white group-hover:text-cyber-gold transition">
+            <h3 class="font-heading font-bold text-2xl text-white group-hover:text-brand-cyan transition">
               3D Game Prototype — Unreal Engine
             </h3>
 
             <p class="text-slate-300 text-sm leading-relaxed">
-              Engineered an interactive 3D gameplay prototype exploring character locomotion, spatial collision geometry, lighting environments, and custom game loops inside the Unreal Engine ecosystem.
+              Designed an interactive 3D gameplay prototype in Unreal Engine exploring character locomotion, spatial collision geometry, interactive trigger events, and dynamic lighting environments.
             </p>
 
-            <!-- Feature Highlights -->
             <ul class="space-y-2 text-xs text-slate-400 font-mono">
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-cyber-gold mt-0.5"></i>
-                <span>Implemented smooth third-person character controller and physics camera.</span>
+                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
+                <span>Engineered responsive third-person character physics and smooth movement loops.</span>
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-cyber-gold mt-0.5"></i>
-                <span>Configured interactive level geometry, trigger volumes, and event dispatchers.</span>
+                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
+                <span>Designed 3D level geometry with custom collision boxes and event dispatchers.</span>
               </li>
               <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check text-cyber-gold mt-0.5"></i>
-                <span>Applied lighting passes (Lumen/Dynamic) and material optimization.</span>
+                <i class="fa-solid fa-check text-brand-cyan mt-0.5"></i>
+                <span>Configured Unreal Blueprints, physics constraints, and atmospheric lighting.</span>
               </li>
             </ul>
 
-            <!-- Tech Tags -->
             <div class="flex flex-wrap gap-2 pt-2">
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Unreal Engine</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Blueprints & Game Logic</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">3D Level Design</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Physics Simulation</span>
+              <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-300 font-mono text-xs border border-brand-cardBorder">Unreal Engine</span>
+              <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-300 font-mono text-xs border border-brand-cardBorder">Blueprints Logic</span>
+              <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-300 font-mono text-xs border border-brand-cardBorder">3D Level Design</span>
+              <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-300 font-mono text-xs border border-brand-cardBorder">Gameplay Physics</span>
             </div>
           </div>
 
-          <div class="pt-6 border-t border-cyber-border/70 flex items-center justify-between mt-6">
+          <div class="pt-6 border-t border-brand-cardBorder flex items-center justify-between mt-6">
             <span class="font-mono text-xs text-slate-400">Engine: UE5 / Unity</span>
-            <a href="https://github.com/yashwanth12317-dev" target="_blank" class="font-mono text-xs text-cyber-gold hover:underline flex items-center gap-1.5 group-hover:translate-x-1 transition">
+            <a href="https://github.com/yashwanth12317-dev" target="_blank" class="font-mono text-xs text-brand-cyan hover:underline flex items-center gap-1.5 group-hover:translate-x-1 transition">
               <span>View Repositories</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
@@ -440,258 +757,81 @@
       </div>
     </section>
 
-    <!-- SECTION 2: INDUSTRY EXPERIENCE & INNOVATION FELLOWSHIP -->
-    <section id="experience" class="py-20 border-t border-cyber-border relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+    <!-- SECTION 4: TECHNICAL SKILLS & MATRIX -->
+    <section id="skills" class="py-16 border-t border-brand-cardBorder relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
-          <div class="flex items-center gap-2 font-mono text-cyber-gold text-xs uppercase tracking-widest">
-            <span>// PROFESSIONAL JOURNEY</span>
+          <div class="flex items-center gap-2 font-mono text-brand-cyan text-xs uppercase tracking-widest mb-1">
+            <span>// CAPABILITIES</span>
           </div>
-          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mt-1">
-            Industry <span class="gold-gradient-text">Experience</span>
-          </h2>
-        </div>
-        <span class="font-mono text-xs text-slate-400">20-Week Accelerated Innovation Track</span>
-      </div>
-
-      <div class="bg-cyber-card border border-cyber-border rounded-2xl p-6 sm:p-10 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-cyber-gold/5 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="flex flex-col lg:flex-row gap-8 items-start justify-between">
-          <div class="space-y-4 max-w-3xl">
-            <div class="flex flex-wrap items-center gap-3">
-              <span class="px-3 py-1 rounded bg-cyber-gold/15 border border-cyber-gold/40 text-cyber-gold font-mono font-bold text-xs uppercase tracking-wider">
-                ProtoSem — FORGE Innovation Fellowship
-              </span>
-              <span class="font-mono text-xs text-slate-400 flex items-center gap-1">
-                <i class="fa-regular fa-clock text-cyber-gold"></i> 20 Weeks Intensive Program
-              </span>
-            </div>
-
-            <h3 class="font-heading font-bold text-2xl sm:text-3xl text-white">
-              Graduate Innovation Trainee / Prototyping Fellow
-            </h3>
-
-            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Selected for the rigorous <strong class="text-white">ProtoSem 20-week innovation program</strong> powered by FORGE. Engaged in hands-on rapid product engineering, customer discovery, iterative prototype fabrication, and collaborative technology problem-solving.
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div class="bg-cyber-dark/80 p-4 rounded-xl border border-cyber-border/80 space-y-1">
-                <h4 class="font-mono font-bold text-xs text-cyber-gold uppercase flex items-center gap-1.5">
-                  <i class="fa-solid fa-cube"></i> Rapid Prototyping
-                </h4>
-                <p class="text-slate-400 text-xs leading-normal">
-                  Transformed conceptual ideas into validated technical prototypes through agile engineering cycles.
-                </p>
-              </div>
-
-              <div class="bg-cyber-dark/80 p-4 rounded-xl border border-cyber-border/80 space-y-1">
-                <h4 class="font-mono font-bold text-xs text-cyber-gold uppercase flex items-center gap-1.5">
-                  <i class="fa-solid fa-people-group"></i> Cross-Disciplinary Teamwork
-                </h4>
-                <p class="text-slate-400 text-xs leading-normal">
-                  Collaborated within multidisciplinary student squads, managing milestones and technical presentations.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full lg:w-72 bg-cyber-black p-6 rounded-xl border border-cyber-border space-y-4 font-mono text-xs">
-            <div class="text-cyber-gold font-bold uppercase tracking-wider pb-2 border-b border-cyber-border flex items-center gap-2">
-              <i class="fa-solid fa-clipboard-check"></i> Key Competencies
-            </div>
-            <div class="space-y-2 text-slate-300">
-              <div class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyber-gold"></span>
-                <span>Agile Problem Solving</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyber-gold"></span>
-                <span>Prototype Validation</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyber-gold"></span>
-                <span>Iterative Design Loops</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyber-gold"></span>
-                <span>Technical Communication</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: TECHNICAL SKILLS MATRIX -->
-    <section id="skills" class="py-20 border-t border-cyber-border relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-        <div>
-          <div class="flex items-center gap-2 font-mono text-cyber-gold text-xs uppercase tracking-widest">
-            <span>// SKILL TREE & CAPABILITIES</span>
-          </div>
-          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mt-1">
-            Technical <span class="gold-gradient-text">Matrix</span>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">
+            Technical <span class="gradient-heading">Skills</span>
           </h2>
         </div>
         <p class="text-slate-400 font-mono text-xs max-w-md">
-          A blend of programming, game design engines, cybersecurity tools, and database fundamentals.
+          A blend of programming, game engines, cybersecurity toolchains, and hardware-software prototyping.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <!-- Card 1: Core Programming -->
-        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl space-y-4 hover:border-cyber-gold/50 transition">
-          <div class="w-12 h-12 rounded-lg bg-cyber-gold/10 border border-cyber-gold/30 flex items-center justify-center text-cyber-gold text-xl">
+        <!-- Skill Card 1 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-brand-cyan transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan text-xl">
             <i class="fa-solid fa-code"></i>
           </div>
           <h3 class="font-heading font-bold text-lg text-white">Programming & Web</h3>
-          <p class="text-slate-400 text-xs leading-relaxed">Robust programming foundations and web development structure.</p>
+          <p class="text-slate-400 text-xs">Solid object-oriented programming and responsive web architecture.</p>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Python</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Java</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">HTML5 / CSS</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">JavaScript</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Python</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Java</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">HTML5</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">CSS3 / JS</span>
           </div>
         </div>
 
-        <!-- Card 2: Game Development -->
-        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl space-y-4 hover:border-cyber-gold/50 transition">
-          <div class="w-12 h-12 rounded-lg bg-cyber-gold/10 border border-cyber-gold/30 flex items-center justify-center text-cyber-gold text-xl">
+        <!-- Skill Card 2 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-purple-400 transition">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
             <i class="fa-solid fa-gamepad"></i>
           </div>
           <h3 class="font-heading font-bold text-lg text-white">Game Development</h3>
-          <p class="text-slate-400 text-xs leading-relaxed">Designing 3D worlds, mechanics, blueprints, and player interactions.</p>
+          <p class="text-slate-400 text-xs">Immersive 3D environments, mechanics, controllers, and blueprints.</p>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Unreal Engine</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Unity Engine</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Gameplay Blueprints</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">3D Prototyping</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Unreal Engine</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Unity Engine</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">UE Blueprints</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Level Design</span>
           </div>
         </div>
 
-        <!-- Card 3: Cybersecurity -->
-        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl space-y-4 hover:border-cyber-gold/50 transition">
-          <div class="w-12 h-12 rounded-lg bg-cyber-gold/10 border border-cyber-gold/30 flex items-center justify-center text-cyber-gold text-xl">
+        <!-- Skill Card 3 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-emerald-400 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl">
             <i class="fa-solid fa-shield-halved"></i>
           </div>
           <h3 class="font-heading font-bold text-lg text-white">Cybersecurity</h3>
-          <p class="text-slate-400 text-xs leading-relaxed">Network defense principles, security fundamentals, and penetration tools.</p>
+          <p class="text-slate-400 text-xs">Security fundamentals, penetration testing environments, and protocols.</p>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Kali Linux</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Security Fundamentals</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Networking Basics</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Threat Awareness</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Kali Linux</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Network Security</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Threat Basics</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Linux Shell</span>
           </div>
         </div>
 
-        <!-- Card 4: Databases & Systems -->
-        <div class="bg-cyber-card border border-cyber-border p-6 rounded-xl space-y-4 hover:border-cyber-gold/50 transition">
-          <div class="w-12 h-12 rounded-lg bg-cyber-gold/10 border border-cyber-gold/30 flex items-center justify-center text-cyber-gold text-xl">
+        <!-- Skill Card 4 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-brand-cyan transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan text-xl">
             <i class="fa-solid fa-database"></i>
           </div>
-          <h3 class="font-heading font-bold text-lg text-white">Database & Systems</h3>
-          <p class="text-slate-400 text-xs leading-relaxed">Data modeling, structured querying, and system architecture basics.</p>
+          <h3 class="font-heading font-bold text-lg text-white">Databases & Prototyping</h3>
+          <p class="text-slate-400 text-xs">Relational schema design, version control, and rapid hardware/software translation.</p>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">SQL / Relational DB</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Data Modeling</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Git & GitHub</span>
-            <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-200 font-mono text-xs border border-cyber-border">Linux / Shell</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 4: ATHLETICS, LEADERSHIP & MULTILINGUAL -->
-    <section id="achievements" class="py-20 border-t border-cyber-border relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-        <div>
-          <div class="flex items-center gap-2 font-mono text-cyber-gold text-xs uppercase tracking-widest">
-            <span>// ATHLETICS & CHARACTER</span>
-          </div>
-          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mt-1">
-            Leadership & <span class="gold-gradient-text">National Sports</span>
-          </h2>
-        </div>
-        <p class="text-slate-400 font-mono text-xs max-w-md">
-          High-performance athletic discipline translating directly into teamwork, strategic thinking, and resilience under pressure.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-        <!-- Card 1: Football National Athlete -->
-        <div class="lg:col-span-2 bg-cyber-card border border-cyber-border rounded-xl p-6 sm:p-8 relative overflow-hidden space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-xl bg-cyber-gold/10 border border-cyber-gold/30 flex items-center justify-center text-cyber-gold text-2xl">
-              <i class="fa-solid fa-trophy"></i>
-            </div>
-            <div>
-              <h3 class="font-heading font-bold text-xl text-white">Rebels FC (Bangalore U18) & India Futsal</h3>
-              <p class="font-mono text-xs text-cyber-gold">National-Level Competitive Football Player</p>
-            </div>
-          </div>
-
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Competed at the highest national youth tier representing <strong class="text-white">Rebels Football Club (Bangalore U18)</strong> and participated in national <strong class="text-white">India Futsal</strong> tournaments. Steered teams to podium finishes and tournament victories as team leader and captain.
-          </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-            <div class="bg-cyber-dark p-3.5 rounded-lg border border-cyber-border font-mono">
-              <span class="text-cyber-gold text-xs block font-bold">// DISCIPLINE</span>
-              <span class="text-slate-300 text-xs">Unwavering work ethic and relentless consistency.</span>
-            </div>
-            <div class="bg-cyber-dark p-3.5 rounded-lg border border-cyber-border font-mono">
-              <span class="text-cyber-gold text-xs block font-bold">// LEADERSHIP</span>
-              <span class="text-slate-300 text-xs">Decisive execution and rallying teams under high pressure.</span>
-            </div>
-            <div class="bg-cyber-dark p-3.5 rounded-lg border border-cyber-border font-mono">
-              <span class="text-cyber-gold text-xs block font-bold">// TACTICAL VISION</span>
-              <span class="text-slate-300 text-xs">Real-time situational awareness & strategic adaptability.</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: Soft Skills & Languages -->
-        <div class="bg-cyber-card border border-cyber-border rounded-xl p-6 sm:p-8 space-y-6">
-          <div>
-            <h3 class="font-heading font-bold text-lg text-white mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-brain text-cyber-gold text-sm"></i> Core Soft Skills
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Leadership</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Teamwork</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Problem-Solving</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Public Speaking</span>
-              <span class="px-2.5 py-1 rounded bg-cyber-dark text-slate-300 font-mono text-xs border border-cyber-border">Creativity</span>
-            </div>
-          </div>
-
-          <div class="pt-4 border-t border-cyber-border">
-            <h3 class="font-heading font-bold text-lg text-white mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-language text-cyber-gold text-sm"></i> Multilingual Fluency
-            </h3>
-            <div class="grid grid-cols-2 gap-2 font-mono text-xs">
-              <div class="bg-cyber-dark px-3 py-2 rounded border border-cyber-border text-slate-300 flex justify-between">
-                <span>English</span>
-                <span class="text-cyber-gold">Proficient</span>
-              </div>
-              <div class="bg-cyber-dark px-3 py-2 rounded border border-cyber-border text-slate-300 flex justify-between">
-                <span>Tamil</span>
-                <span class="text-cyber-gold">Native</span>
-              </div>
-              <div class="bg-cyber-dark px-3 py-2 rounded border border-cyber-border text-slate-300 flex justify-between">
-                <span>Hindi</span>
-                <span class="text-cyber-gold">Conversational</span>
-              </div>
-              <div class="bg-cyber-dark px-3 py-2 rounded border border-cyber-border text-slate-300 flex justify-between">
-                <span>Telugu</span>
-                <span class="text-cyber-gold">Conversational</span>
-              </div>
-            </div>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">SQL / Relational DB</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">FORGE Prototyping</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Git / GitHub</span>
+            <span class="px-2.5 py-1 rounded bg-brand-dark text-slate-200 font-mono text-xs border border-brand-cardBorder">Agile Sprints</span>
           </div>
         </div>
 
@@ -699,62 +839,59 @@
     </section>
 
     <!-- SECTION 5: CONTACT & FOOTER -->
-    <section id="contact" class="py-20 border-t border-cyber-border relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="bg-cyber-card border border-cyber-border rounded-2xl p-8 sm:p-12 relative overflow-hidden">
+    <section id="contact" class="py-16 border-t border-brand-cardBorder relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-brand-cardBorder">
         <div class="max-w-3xl mx-auto text-center space-y-6">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyber-gold/10 border border-cyber-gold/30 text-cyber-gold font-mono text-xs tracking-wider uppercase">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan font-mono text-xs tracking-wider uppercase">
             <span>// LET'S CONNECT</span>
           </div>
 
           <h2 class="font-heading font-black text-3xl sm:text-5xl text-white">
-            Ready to Build Something <span class="gold-gradient-text">Extraordinary?</span>
+            Let's Build Something <span class="gradient-heading">Remarkable</span>
           </h2>
 
           <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Whether you have an internship opportunity, a game development project, a cybersecurity inquiry, or simply want to chat about tech & football — my inbox is always open!
+            Interested in discussing game development, cybersecurity projects, innovation fellowships, or football leadership? Feel free to reach out directly!
           </p>
 
           <!-- Contact Cards Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 text-left">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left">
 
-            <!-- Email Card -->
-            <a href="mailto:yashwanth12317@gmail.com" class="p-4 rounded-xl bg-cyber-dark border border-cyber-border hover:border-cyber-gold transition group">
-              <div class="w-10 h-10 rounded-lg bg-cyber-gold/10 border border-cyber-gold/20 flex items-center justify-center text-cyber-gold mb-3 group-hover:scale-110 transition">
+            <a href="mailto:yashwanth12317@gmail.com" class="p-4 rounded-xl bg-brand-dark border border-brand-cardBorder hover:border-brand-cyan transition group">
+              <div class="w-10 h-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/20 flex items-center justify-center text-brand-cyan mb-3 group-hover:scale-110 transition">
                 <i class="fa-solid fa-envelope"></i>
               </div>
-              <p class="font-mono text-[10px] text-cyber-dim uppercase">Email Direct</p>
-              <p class="text-xs font-mono text-white truncate group-hover:text-cyber-gold transition">yashwanth12317@gmail.com</p>
+              <p class="font-mono text-[10px] text-slate-400 uppercase">Direct Email</p>
+              <p class="text-xs font-mono text-white truncate group-hover:text-brand-cyan transition">yashwanth12317@gmail.com</p>
             </a>
 
-            <!-- Phone Card -->
-            <a href="tel:6381901236" class="p-4 rounded-xl bg-cyber-dark border border-cyber-border hover:border-cyber-gold transition group">
-              <div class="w-10 h-10 rounded-lg bg-cyber-gold/10 border border-cyber-gold/20 flex items-center justify-center text-cyber-gold mb-3 group-hover:scale-110 transition">
+            <a href="tel:6381901236" class="p-4 rounded-xl bg-brand-dark border border-brand-cardBorder hover:border-brand-cyan transition group">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-3 group-hover:scale-110 transition">
                 <i class="fa-solid fa-phone"></i>
               </div>
-              <p class="font-mono text-[10px] text-cyber-dim uppercase">Phone / WhatsApp</p>
-              <p class="text-xs font-mono text-white truncate group-hover:text-cyber-gold transition">+91 6381901236</p>
+              <p class="font-mono text-[10px] text-slate-400 uppercase">Phone / WhatsApp</p>
+              <p class="text-xs font-mono text-white truncate group-hover:text-emerald-400 transition">+91 6381901236</p>
             </a>
 
-            <!-- LinkedIn Card -->
-            <a href="https://linkedin.com/in/yashwanth-r-9a9b3520b" target="_blank" class="p-4 rounded-xl bg-cyber-dark border border-cyber-border hover:border-cyber-gold transition group">
-              <div class="w-10 h-10 rounded-lg bg-cyber-gold/10 border border-cyber-gold/20 flex items-center justify-center text-cyber-gold mb-3 group-hover:scale-110 transition">
+            <a href="https://linkedin.com/in/yashwanth-r-9a9b3520b" target="_blank" class="p-4 rounded-xl bg-brand-dark border border-brand-cardBorder hover:border-brand-cyan transition group">
+              <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-3 group-hover:scale-110 transition">
                 <i class="fa-brands fa-linkedin-in"></i>
               </div>
-              <p class="font-mono text-[10px] text-cyber-dim uppercase">LinkedIn Profile</p>
-              <p class="text-xs font-mono text-white truncate group-hover:text-cyber-gold transition">in/yashwanth-r-9a9b3520b</p>
+              <p class="font-mono text-[10px] text-slate-400 uppercase">LinkedIn Profile</p>
+              <p class="text-xs font-mono text-white truncate group-hover:text-amber-400 transition">in/yashwanth-r-9a9b3520b</p>
             </a>
 
           </div>
 
-          <!-- Direct Copy & Action Buttons -->
-          <div class="pt-6 flex flex-wrap items-center justify-center gap-4">
-            <button id="copy-email-btn" onclick="copyEmail()" class="magnetic-btn px-6 py-3 rounded-lg bg-cyber-dark border border-cyber-gold/50 text-cyber-gold font-mono text-xs uppercase font-bold tracking-wider hover:bg-cyber-gold hover:text-black transition flex items-center gap-2">
+          <!-- Buttons -->
+          <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+            <button id="copy-email-btn" onclick="copyEmail()" class="magnetic-btn px-6 py-3 rounded-xl bg-brand-dark border border-brand-cyan/50 text-brand-cyan font-mono text-xs uppercase font-bold tracking-wider hover:bg-brand-cyan hover:text-black transition flex items-center gap-2">
               <i class="fa-regular fa-copy"></i>
               <span id="copy-text">Copy Email Address</span>
             </button>
 
-            <a href="resume.html" target="_blank" class="magnetic-btn px-6 py-3 rounded-lg bg-cyber-gold text-black font-mono text-xs uppercase font-bold tracking-wider shadow-gold-glow hover:bg-cyber-goldLight transition flex items-center gap-2">
+            <a href="resume.html" target="_blank" class="magnetic-btn px-6 py-3 rounded-xl bg-brand-cyan text-black font-mono text-xs uppercase font-bold tracking-wider shadow-cyan-glow hover:bg-brand-cyanGlow transition flex items-center gap-2">
               <i class="fa-solid fa-file-arrow-down"></i>
               <span>Open ATS Resume</span>
             </a>
@@ -763,39 +900,39 @@
         </div>
       </div>
 
-      <!-- Bottom Credits -->
-      <footer class="mt-12 flex flex-col sm:flex-row items-center justify-between text-slate-500 font-mono text-xs border-t border-cyber-border/40 pt-6 gap-4">
-        <p>© 2026 Yashwanth R. Built with precision & passion.</p>
+      <!-- Footer -->
+      <footer class="mt-12 flex flex-col sm:flex-row items-center justify-between text-slate-500 font-mono text-xs border-t border-brand-cardBorder/50 pt-6 gap-4">
+        <p>© 2026 Yashwanth R. Designed with purpose & performance.</p>
         <div class="flex items-center gap-4">
-          <a href="https://github.com/yashwanth12317-dev" target="_blank" class="hover:text-cyber-gold transition">GitHub</a>
+          <a href="https://github.com/yashwanth12317-dev" target="_blank" class="hover:text-brand-cyan transition">GitHub</a>
           <span>·</span>
-          <a href="https://linkedin.com/in/yashwanth-r-9a9b3520b" target="_blank" class="hover:text-cyber-gold transition">LinkedIn</a>
+          <a href="https://linkedin.com/in/yashwanth-r-9a9b3520b" target="_blank" class="hover:text-brand-cyan transition">LinkedIn</a>
           <span>·</span>
-          <a href="resume.html" class="hover:text-cyber-gold transition">Resume</a>
+          <a href="resume.html" class="hover:text-brand-cyan transition">ATS Resume</a>
         </div>
       </footer>
     </section>
 
   </div>
 
-  <!-- Interactive Scripts: Typed.js, Tilt, Magnetic Buttons, Copy Toast -->
+  <!-- Interactive Scripts -->
   <script>
     // Typed.js Dynamic Subtitle Animation
     document.addEventListener("DOMContentLoaded", function() {
       new Typed("#typed-text", {
         strings: [
-          "B.Tech Information Technology Student",
+          "Currently undergoing ProtoSem @ FORGE",
           "Game Developer (Unreal Engine & Unity)",
+          "Rebels FC National Athlete & Team Leader",
           "Cybersecurity & Threat Analyst",
-          "Python & Software Developer",
-          "National Football Athlete & Team Leader"
+          "B.Tech IT Student @ Kumaraguru (KCT)"
         ],
-        typeSpeed: 45,
-        backSpeed: 25,
-        backDelay: 1800,
+        typeSpeed: 40,
+        backSpeed: 20,
+        backDelay: 1700,
         loop: true,
         showCursor: true,
-        cursorChar: "█"
+        cursorChar: "▋"
       });
 
       // Magnetic Buttons Micro-Interaction
@@ -805,7 +942,7 @@
           const rect = btn.getBoundingClientRect();
           const x = e.clientX - rect.left - rect.width / 2;
           const y = e.clientY - rect.top - rect.height / 2;
-          btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+          btn.style.transform = `translate(${x * 0.22}px, ${y * 0.22}px)`;
         });
 
         btn.addEventListener("mouseleave", function() {
@@ -820,7 +957,7 @@
       navigator.clipboard.writeText(email).then(() => {
         const copyText = document.getElementById("copy-text");
         const originalText = copyText.innerText;
-        copyText.innerText = "Copied to Clipboard! ✓";
+        copyText.innerText = "Email Copied! ✓";
         setTimeout(() => {
           copyText.innerText = originalText;
         }, 2500);
