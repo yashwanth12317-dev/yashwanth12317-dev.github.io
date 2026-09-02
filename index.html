@@ -85,7 +85,7 @@
     }
 
     .glass-card {
-      background: rgba(16, 23, 42, 0.75);
+      background: rgba(16, 23, 42, 0.85);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(30, 41, 59, 0.9);
@@ -119,9 +119,9 @@
 
     /* Radar Ping Animation */
     @keyframes radar-pulse {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.1); opacity: 0.3; }
-      100% { transform: scale(0.95); opacity: 0.8; }
+      0% { transform: scale(0.96); opacity: 0.8; }
+      50% { transform: scale(1.08); opacity: 0.3; }
+      100% { transform: scale(0.96); opacity: 0.8; }
     }
     .radar-ring {
       animation: radar-pulse 3s infinite ease-in-out;
@@ -189,8 +189,8 @@
       </div>
     </header>
 
-    <!-- HERO SECTION (With User Photo & 3D Floating Tilt Card) -->
-    <section id="hero" class="relative pt-10 pb-16 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-8 pb-16 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
         <!-- Left Hero Content -->
@@ -212,16 +212,17 @@
           <div class="flex items-center gap-5 sm:gap-6 pt-2">
             <!-- Starting Photo Frame Near Name -->
             <div class="relative group flex-shrink-0">
-              <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-emerald-400 to-amber-400 opacity-80 blur group-hover:opacity-100 transition duration-300 radar-ring"></div>
-              <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-brand-cyan bg-brand-dark p-0.5 shadow-cyan-glow">
-                <img src="profile.jpg"
+              <div class="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-cyan-500 via-emerald-400 to-amber-400 opacity-90 blur-sm group-hover:opacity-100 transition duration-300 radar-ring"></div>
+              <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-brand-cyan bg-brand-dark p-0.5 shadow-cyan-glow">
+                <img src="profile.jpg?v=20260902"
                      alt="Yashwanth R"
+                     style="object-position: center 22%;"
                      class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition duration-500" />
               </div>
             </div>
 
             <div class="space-y-1">
-              <p class="font-mono text-brand-cyan text-xs sm:text-sm tracking-widest uppercase">// IT ENGINEER & BUILDER</p>
+              <p class="font-mono text-brand-cyan text-xs sm:text-sm tracking-widest uppercase">// IT ENGINEER & INNOVATOR</p>
               <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white">
                 YASHWANTH <span class="gradient-heading">R</span>
               </h1>
@@ -300,11 +301,12 @@
             </div>
 
             <!-- Profile Hero Showcase in Card -->
-            <div class="relative w-full h-56 rounded-xl overflow-hidden border border-brand-cardBorder mb-5 bg-brand-dark group">
-              <img src="profile.jpg"
+            <div class="relative w-full h-64 sm:h-72 rounded-xl overflow-hidden border border-brand-cardBorder mb-5 bg-brand-dark group">
+              <img src="profile.jpg?v=20260902"
                    alt="Yashwanth R"
-                   class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent"></div>
+                   style="object-position: center 20%;"
+                   class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/25 to-transparent"></div>
               
               <!-- Floating Overlay Tags -->
               <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
@@ -354,7 +356,7 @@
       </div>
     </section>
 
-    <!-- NEW SEPARATE DEDICATED ROW: PROTOSEM @ FORGE INNOVATION FELLOWSHIP -->
+    <!-- PROTOSEM @ FORGE ROW -->
     <section id="protosem" class="py-16 border-t border-brand-cardBorder relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       
       <!-- Section Header -->
@@ -380,7 +382,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          <!-- Left 8 Cols: Fellowship Narrative & Pillars -->
+          <!-- Left 8 Cols -->
           <div class="lg:col-span-8 space-y-6">
             <div class="flex flex-wrap items-center gap-3">
               <span class="px-3.5 py-1.5 rounded-lg bg-emerald-500 text-black font-mono font-extrabold text-xs uppercase tracking-wider shadow-emerald-glow">
@@ -452,7 +454,7 @@
             </div>
           </div>
 
-          <!-- Right 4 Cols: Live Cohort Status & Metrics Widget -->
+          <!-- Right 4 Cols -->
           <div class="lg:col-span-4 bg-brand-black/90 p-6 rounded-2xl border border-emerald-500/40 space-y-5">
             
             <div class="flex items-center justify-between border-b border-brand-cardBorder pb-3">
@@ -505,7 +507,6 @@
               </div>
             </div>
 
-            <!-- Focus Summary -->
             <div class="p-3.5 rounded-xl bg-brand-dark border border-brand-cardBorder font-mono text-xs text-slate-300 space-y-1">
               <span class="text-emerald-400 font-bold block text-[10px] uppercase">// CORE TAKEAWAY</span>
               <p class="text-[11px] leading-relaxed text-slate-300">
@@ -519,7 +520,7 @@
       </div>
     </section>
 
-    <!-- NEW EXPANDED SECTION: FOOTBALL, REBELS FC & ATHLETIC LEADERSHIP -->
+    <!-- EXPANDED SECTION: FOOTBALL, REBELS FC & ATHLETIC LEADERSHIP -->
     <section id="football" class="py-16 border-t border-brand-cardBorder relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       
       <!-- Section Header -->
@@ -569,7 +570,7 @@
             As a <strong class="text-white">Team Captain & Field Leader</strong> across numerous competitive tournaments, I spearheaded training regimes, marshaled on-pitch defensive and attacking transitions, and propelled squads to championship victories through tactical discipline and grit.
           </p>
 
-          <!-- 3 Pillars: Discipline, Leadership, Tactics -->
+          <!-- 3 Pillars -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
             <div class="bg-brand-black/90 p-4 rounded-xl border border-brand-cardBorder space-y-1.5">
               <span class="text-amber-400 font-mono font-bold text-xs flex items-center gap-1.5">
@@ -600,10 +601,9 @@
           </div>
         </div>
 
-        <!-- Sidebar Stats & Insights (4 cols) -->
+        <!-- Sidebar Stats -->
         <div class="lg:col-span-4 space-y-4">
           
-          <!-- Stat Card 1 -->
           <div class="glass-card p-5 rounded-xl border border-amber-500/30 font-mono">
             <div class="flex items-center justify-between mb-2">
               <span class="text-slate-400 text-xs uppercase">// COMPETITIVE TIER</span>
@@ -613,7 +613,6 @@
             <p class="text-xs text-amber-400 mt-1">Rebels FC (Bangalore U18) & India Futsal</p>
           </div>
 
-          <!-- Stat Card 2 -->
           <div class="glass-card p-5 rounded-xl border border-brand-cardBorder font-mono">
             <div class="flex items-center justify-between mb-2">
               <span class="text-slate-400 text-xs uppercase">// TOURNAMENT ROLE</span>
@@ -623,7 +622,6 @@
             <p class="text-xs text-brand-cyan mt-1">Steering squads to competitive victories</p>
           </div>
 
-          <!-- Bridge between sports & engineering -->
           <div class="p-5 rounded-xl bg-brand-dark border border-brand-cardBorder font-mono text-xs space-y-2">
             <span class="text-amber-400 font-bold block">// ATHLETIC MINDSET IN TECH</span>
             <p class="text-slate-300 text-[11px] leading-relaxed">
@@ -654,7 +652,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <!-- Project 1: Kirana Store Stock Replenishment Software -->
+        <!-- Project 1 -->
         <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-brand-cyan transition group hover:shadow-cyan-glow">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
@@ -704,7 +702,7 @@
           </div>
         </div>
 
-        <!-- Project 2: 3D Game Prototype in Unreal Engine -->
+        <!-- Project 2 -->
         <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-brand-cyan transition group hover:shadow-cyan-glow">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
